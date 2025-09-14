@@ -1,2 +1,11 @@
 config:
   aws:region: us-west-2
+  foundation:ks.client: penobscot
+  foundation:ks.baseDomain: penobscot-etg.org
+  foundation:network.existingVpcId: vpc-04b6b13cf5519b03e
+
+# Public subzone (optional; you can omit this whole section)
+# foundation:publicSubzone.create: true
+# foundation:publicSubzone.name: dev.penobscot-etg.org
+# If apex is also in Route 53 and same account, you *may* auto-delegate:
+# foundation:publicSubzone.parentZoneId: ZAPEXABCDEFGHIJ
