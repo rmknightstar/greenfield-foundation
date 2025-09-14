@@ -34,7 +34,6 @@ else:
 phz = aws.route53.Zone(
     ctx.name("phz"),
     name=ctx.private_zone_name(),    # requires foundation:ks.baseDomain
-    private_zone=True,
     vpcs=[aws.route53.ZoneVpcArgs(vpc_id=vpc.id, vpc_region=region)],
     tags=ctx.tags({"Name": ctx.private_zone_name()}),
 )
